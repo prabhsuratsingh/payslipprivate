@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/pages/payslipscreen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(const MyApp());
@@ -24,7 +25,14 @@ class MyApp extends StatelessWidget {
             ),
           ),
           centerTitle: true,
-          leading: const BackButton(),
+          leading: IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              "assets/vectors/vector_x2.svg",
+              height: 15,
+              width: 21,
+            ),
+          ),
         ),
         body: const Payslipscreen(),
       ),
