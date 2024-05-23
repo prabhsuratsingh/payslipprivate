@@ -554,6 +554,7 @@ class Payslipscreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  //earning end
                   Container(
                     margin: const EdgeInsets.fromLTRB(0, 0, 0, 11),
                     child: Column(
@@ -586,114 +587,107 @@ class Payslipscreen extends StatelessWidget {
                             ],
                           ),
                           child: Container(
-                            padding:
-                                const EdgeInsets.fromLTRB(21, 17, 23.3, 16),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            padding:const EdgeInsets.fromLTRB(21, 17, 23.3, 16),
+                            child: Table(
+                              columnWidths: const {
+                                0: FixedColumnWidth(240.0),
+                                1: FlexColumnWidth()
+                              },
+
                               children: [
-                                Expanded(
-                                  child: Container(
-                                    margin: const EdgeInsets.fromLTRB(
-                                        0, 0, 58.3, 0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 12),
-                                          child: Text(
-                                            'Total number of days in a month',
-                                            style: GoogleFonts.getFont(
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
+                                      child: Text(
+                                        "Total number of days in a month",
+                                        style: GoogleFonts.getFont(
                                               'Noto Sans',
                                               fontWeight: FontWeight.w400,
                                               fontSize: 15,
                                               color: const Color(0xFF000000),
-                                            ),
-                                          ),
                                         ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 14),
-                                          child: Text(
-                                            'Number of days absent',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 10.8, 0),
-                                          child: Text(
-                                            'Number of days present out of total days in a month',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    margin:
-                                        const EdgeInsets.fromLTRB(0, 0, 0, 13),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Text(
-                                          '00',
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
+                                      child: Align (
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "00",
                                           style: GoogleFonts.getFont(
-                                            'Noto Sans',
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 20,
-                                            color: const Color(0xFF000000),
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
                                           ),
                                         ),
-                                      ],
+                                      ),
                                     ),
-                                  ),
+                                  ]
                                 ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
+                                      child: Text(
+                                        "Number of days absent",
+                                        style: GoogleFonts.getFont(
+                                              'Noto Sans',
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 15,
+                                              color: const Color(0xFF000000),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
+                                      child: Align (
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "00",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
+                                      child: Text(
+                                        "Number of days present",
+                                        style: GoogleFonts.getFont(
+                                              'Noto Sans',
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 15,
+                                              color: const Color(0xFF000000),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 6.0, bottom: 6.0),
+                                      child: Align (
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "00",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ]
+                                )
                               ],
                             ),
                           ),
@@ -701,6 +695,7 @@ class Payslipscreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  //attendance end
                   Container(
                     margin: const EdgeInsets.fromLTRB(0, 0, 0, 11),
                     child: Column(
@@ -734,7 +729,188 @@ class Payslipscreen extends StatelessWidget {
                           ),
                           child: Container(
                             padding: const EdgeInsets.fromLTRB(20, 4, 21.5, 4),
-                            child: Row(
+                            child: Table(
+                              columnWidths: const {
+                                0: FlexColumnWidth(),
+                                1: FixedColumnWidth(0.0),
+                                2: FlexColumnWidth(),
+                              },
+                              children: [
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Employee PF",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Taxes",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Advance/Loan(s)",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Gross Deductions",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 15,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "=",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                              ],
+                            )
+                            /*child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -1006,7 +1182,7 @@ class Payslipscreen extends StatelessWidget {
                                   ),
                                 ),
                               ],
-                            ),
+                            ),*/
                           ),
                         ),
                       ],
