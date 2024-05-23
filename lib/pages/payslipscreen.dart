@@ -56,36 +56,36 @@ class Payslipscreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        // FloatingActionButton: FloatingActionButton(
 
-                        //   onPressed: (){},
-                        //   )
-                        // Container(
-                        //   decoration: BoxDecoration(
-                        //     border: Border.all(color: const Color(0x70000000)),
-                        //     borderRadius: BorderRadius.circular(8),
-                        //     color: const Color(0xFF020735),
-                        //     boxShadow: const [
-                        //       BoxShadow(
-                        //         color: Color(0x40000000),
-                        //         offset: Offset(2, 2),
-                        //         blurRadius: 2.4000000954,
-                        //       ),
-                        //     ],
-                        //   ),
-                        //   child: Container(
-                        //     padding: const EdgeInsets.fromLTRB(13, 7, 18.4, 8),
-                        //     child: Text(
-                        //       'Download',
-                        //       style: GoogleFonts.getFont(
-                        //         'Noto Sans',
-                        //         fontWeight: FontWeight.w400,
-                        //         fontSize: 16,
-                        //         color: const Color(0xFFFFFFFF),
-                        //       ),
-                        //     ),
-                        //   ),
-                        // ),
+                        GestureDetector(
+                          onTap: () {},
+                          child: Container(
+                            decoration: BoxDecoration(
+                             border: Border.all(color: const Color(0x70000000)),
+                             borderRadius: BorderRadius.circular(8),
+                             color: const Color(0xFF020735),
+                             boxShadow: const [
+                               BoxShadow(
+                                 color: Color(0x40000000),
+                                 offset: Offset(2, 2),
+                                 blurRadius: 2.4000000954,
+                                ),
+                              ],
+                            ),
+                            child: Container(
+                              padding: const EdgeInsets.fromLTRB(13, 7, 18.4, 8),
+                              child: Text(
+                                'Download',
+                                style: GoogleFonts.getFont(
+                                  'Noto Sans',
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                  color: const Color(0xFFFFFFFF),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -239,427 +239,316 @@ class Payslipscreen extends StatelessWidget {
                           ),
                           child: Container(
                             padding: const EdgeInsets.fromLTRB(21, 8, 21.5, 11),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            child: Table(
+                              columnWidths: const {
+                                0: FlexColumnWidth(),
+                                1: FixedColumnWidth(0.0),
+                                2: FlexColumnWidth(),
+                              },
                               children: [
-                                Expanded(
-                                  child: Container(
-                                    margin: const EdgeInsets.fromLTRB(
-                                        0, 6, 37.6, 3),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Container(
-                                          padding: const EdgeInsets.only(),
-                                          child: Text(
-                                            'Basic pay',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          padding: const EdgeInsets.only(
-                                              left: 0, right: 0),
-                                          child: Text(
-                                            'A.G.P.',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              2, 0, 2, 13),
-                                          child: Text(
-                                            'D.A.',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              2, 0, 2, 13),
-                                          child: Text(
-                                            'H.R.A.',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              2, 0, 2, 13),
-                                          child: Text(
-                                            'TPT',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              2, 0, 2, 13),
-                                          child: Text(
-                                            'Other',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              2, 0, 0, 0),
-                                          child: Text(
-                                            'Gross Earnings',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 15,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Basic Pay",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
                                     ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    margin: const EdgeInsets.fromLTRB(
-                                        0, 0, 49.1, 0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              45, 0, 0, 3),
-                                          child: Text(
-                                            '+',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 3),
-                                          child: Text(
-                                            '+',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 3),
-                                          child: Text(
-                                            '+',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 2),
-                                          child: Text(
-                                            '+',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 3),
-                                          child: Text(
-                                            '+',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 3),
-                                          child: Text(
-                                            '+',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0.4, 0),
-                                          child: Text(
-                                            '=',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
                                     ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    margin:
-                                        const EdgeInsets.fromLTRB(0, 0, 3.9, 0),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 1, 3),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 1, 3),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              1, 0, 0, 3),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 1, 2),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              1, 0, 0, 3),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 1, 3),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 1, 0),
-                                          child: Text(
-                                            '₹',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 24,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Container(
-                                    margin:
-                                        const EdgeInsets.fromLTRB(0, 2, 0, 2),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: [
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '0000.00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '0000.00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '0000.00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '0000.00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '0000.00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: const EdgeInsets.fromLTRB(
-                                              0, 0, 0, 8),
-                                          child: Text(
-                                            '0000.00',
-                                            style: GoogleFonts.getFont(
-                                              'Noto Sans',
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 20,
-                                              color: const Color(0xFF000000),
-                                            ),
-                                          ),
-                                        ),
-                                        Text(
-                                          '0000.00',
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
                                           style: GoogleFonts.getFont(
-                                            'Noto Sans',
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 20,
-                                            color: const Color(0xFF000000),
-                                          ),
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
                                         ),
-                                      ],
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "A.G.P",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
                                     ),
-                                  ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "D.A.",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "H.R.A",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "TPT",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Others",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "+",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
+                                ),
+                                TableRow(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "Gross Earnings",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Text(
+                                        "=",
+                                        style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                                      child: Align(
+                                        alignment: AlignmentDirectional.centerEnd,
+                                        child: Text(
+                                          "&1000000",
+                                          style: GoogleFonts.getFont(
+                                                'Noto Sans',
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 18,
+                                                color: const Color(0xFF000000),
+                                              ),
+                                        ),
+                                      ),
+                                    )
+                                  ]
                                 ),
                               ],
-                            ),
+                            )
                           ),
                         ),
                       ],
